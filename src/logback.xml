@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<property name="DEV_HOME" value="/opt/tomcat/logs/filteredwall" />
+
+	<appender name="FILE-AUDIT"	class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${DEV_HOME}/filteredWall.log</file>
+		
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<!-- rollover daily -->
+			<fileNamePattern>${DEV_HOME}/archived/filteredWall.%i.log</fileNamePattern>
+			<!-- <maxFileSize>500KB</maxFileSize>
+			<maxHistory>6</maxHistory>
+			<totalSizeCap>15MB</totalSizeCap> -->
+			<minIndex>1</minIndex>
+      		<maxIndex>20</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+      		<maxFileSize>10MB</maxFileSize>
+    	</triggeringPolicy>
+    	
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>
+				%d{yyyy-MM-dd HH:mm:ss} - %msg%n
+			</pattern>
+		</encoder>
+
+	</appender>
+
+	<logger name="org.sudeep.fw" additivity="false">
+		<appender-ref ref="FILE-AUDIT" />
+	</logger>
+	
+
+</configuration>

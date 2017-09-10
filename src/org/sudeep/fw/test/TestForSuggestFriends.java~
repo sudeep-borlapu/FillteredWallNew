@@ -1,0 +1,67 @@
+package org.sudeep.fw.test;
+
+import java.sql.Array;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import org.mariadb.jdbc.MySQLConnection;
+import org.mariadb.jdbc.MySQLDataSource;
+import org.mariadb.jdbc.MySQLPreparedStatement;
+import org.mariadb.jdbc.MySQLResultSet;
+
+
+public class TestForSuggestFriends {
+	public static void main(String args[]) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the id :");
+		int a = s.nextInt();
+		int b = a;
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		try {
+			Class.forName("org.mariadb.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/fwdev","root","sriker11");
+			PreparedStatement pst=con.prepareStatement("select sentto,sentfrom from friends where sentto=? or sentfrom=?");
+			pst.setInt(1, a);
+			pst.setInt(2, b);
+			ResultSet rs = pst.executeQuery();
+			String s2="0";
+			while(rs.next()) {
+				if(rs.getInt(1)==a) {
+					System.out.println("got "+rs.getInt(2));
+					al.add(rs.getInt(2));
+					s2=s2+","+rs.getInt(2);
+				}
+				else if(rs.getInt(2)==a) {
+					System.out.println("got"+rs.getInt(1));
+					al.add(rs.getInt(1));
+					s2=s2+","+rs.getInt(2);
+				}
+			}
+			String s1="";
+			int size=al.size();
+			for(int x:al) {
+				if(s1.length()==size) {
+					s1=s1+x;
+				}
+				s1=s1+",";
+			}
+			System.out.println("s1 string is :"+s2);
+			//Array arSql = con.createArrayOf("INTEGER", al.toArray());
+			MySQLPreparedStatement pst2= (MySQLPreparedStatement) con.prepareStatement("select id from person where id not in ?");//con.prepareStatement("select id from person where id not in ?");
+			//pst.setString(1,s2);
+			pst2.setString(1, s2);
+			rs = pst2.executeQuery();
+			while(rs.next()) {
+				System.out.println("The person id is :"+rs.getInt(1));
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

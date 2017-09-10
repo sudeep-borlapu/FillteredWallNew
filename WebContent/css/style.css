@@ -1,0 +1,311 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body{
+	width : 1190px;
+	height : auto;
+	margin : 0px auto;
+}
+a:visited {
+	color: blue;
+}
+#container{
+	align : center;
+	height : auto;
+	border : thin solid yellow;
+	background-color: black;
+}
+#header{
+	background : lightgreen;
+	border-bottom-right-radius :20px;
+	border-bottom-left-radius : 20px;
+	border-width: 5px black;
+	font-size : 40px;
+	font-family : verdena;
+	font-weight: bold;
+	text-align : center;
+}
+#homehead{
+	height : 30px;
+	background-color: lightgreen;
+	font-weight: bold;
+	padding-top : 5px;
+	padding-left: 10px;
+	
+}
+#register{
+	
+	background : lightgreen;
+	float : left;
+	width : 460px;
+	height : auto;
+	align : center;
+	margin : 20px 80px;
+	border-radius : 20px;
+}
+#errormsg{
+	color : red;
+	font-size : 20px;
+	font-family: verdana;
+	font-style: normal;
+	margin-left : 20px;
+}
+#login{
+	background : lightgreen;
+	float : left;
+	width : 460px;
+	height : 300px;
+	margin : 20px 30px;
+	align : center;
+	border-radius : 20px;
+}
+#forpwd{
+	color : blue;
+	font-size : x-small;
+	float : right;
+	font-family: sans-serif monospace;
+	cursor : pointer;
+}
+footer{
+    padding-top: 10px;
+    clear: both;
+    height: 60px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    background : lightgreen;
+}
+#registertable{
+	margin : 27px;
+}
+#logintable{
+	padding : 30px;
+}
+#logout{
+	font-weight : bold;
+	font-size: 10px;
+	float : right;
+	background-color: white;
+	margin-right : 10px;
+	margin-top : 3px;
+	cursor : pointer;
+}
+#globalerrmsgs{
+	width : auto;
+	height : auto;
+	text-align : center;
+	background : lightgreen;
+	font-weight: bold;
+	font-family: verdana;
+}
+#forgot_box{
+	margin : 30px;
+	background-color: lightgreen;
+	width : 700px;
+	height : auto;
+	border-radius : 15px;
+	padding : 30px;
+	position: relative;
+	text-align: center;
+	margin-left : 80px;
+}
+#home_side{
+	width : 200px;
+	background : #bbf4bb;
+	padding : 10px;
+	float : left;
+	height: 640px;
+	line-height: 25px;
+}
+#home_side div{
+	width : 180px;
+	padding : 3px;
+	border-bottom: thin solid #d4c4c4;
+}
+#home_head a{
+	clear:both; color:black; font-style: normal;text-decoration: none;
+}
+#home_status_update{
+	padding : 10px;
+	
+	
+}
+#home_time_line{
+	padding :10px;
+	margin : 10px;
+	border-bottom : thin black;
+	width : 700px;
+	height : 500px;
+	float : left;
+	text-overflow : ellipsis;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+pre {
+    display: block;
+    font-family: serif, ubuntu, verdana;
+    white-space: pre-wrap;
+    margin: 1em 0;
+    
+}
+#chpwd{
+	height :auto;
+	align :center;
+	background-color: lightgreen;
+	float : left;
+	padding : 20px;
+	margin : 200px 160px;
+	border-radius : 10px;
+	display: block;
+}
+#friendlist{
+	height : 70px;
+	width : 420pX;
+	float : left;
+	margin : 4px;
+	border-bottom : thin solid black;
+}
+#posts{
+	width : 500px;
+	padding : 10px;
+	background-color: #f4f4ce;
+	border-bottom : thin solid black;
+	display : block;
+	float : left;
+}
+#disp_photo{
+	padding : 5px;
+	float : left;
+	display: block;
+}
+#disp_details{
+	padding : 15px;
+	float : left;
+	display: block;
+}
+#misc{
+	float : left;
+	width : 600px;
+	height : 50px;
+	padding :20px;
+	display: block;
+}
+
+#postcontent{
+	width : 455px;
+	display : block;
+	font-size: 12px;
+	font-family : ubuntu, verdana;
+	word-wrap : break-word;	
+	float: right;
+}
+#ajax_output{
+	width : 920px;
+	height : 640px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	display : block;
+}
+#convright{
+	float : right;
+	width : auto;
+	height : auto;
+	background-color : #beebeb;
+	padding : 5px;
+	display: block;
+	border-radius : 4px;
+}
+#convleft{
+	float:left;
+	width : auto;
+	height : auto;
+	padding : 5px;
+	background-color: #e3e644;
+	display : block;
+	border-radius : 4px;
+}
+#msg_side{
+	width : 200px;
+	height : 615px;
+	padding : 10px;
+	margin : 5px;
+	font-size: 14px;
+	background-color: #d0e8f0;
+	float: left;
+	display : block;
+}
+#msg_side a{
+	font-family:Arial;
+	color:blue;
+	text-decoration:none;
+	display : block;
+}
+#msg_side a:active{
+	font-family : ubuntu, sans-serif, Arial;
+	text-decoration: none;
+	display : block;
+}
+
+#conversation{
+	width : 650px;
+	height : 600px;
+	padding :10px;
+	margin : 10px;
+	border-bottom : thin black;
+	float : left;
+	text-overflow : ellipsis;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	display : block;
+}
+#frndlist_msg{
+	width : 180px;
+	padding : 5px;
+	line-height : 3px;
+	border-bottom: thin solid #d4c4c4;
+	margin-top: 3px;
+	text-decoration: none;
+	display : block;
+}
+.uname{
+	background-color: lightgreen;
+	border-radius : 15px;
+	margin-left : 200px;
+	margin-top : 300px;
+	padding : 40px;
+	width : 400px;
+	float: left;
+	display : block;
+}
+.edit_profile{
+	font-size: 0.7em;
+	color: blue;
+	border : none;
+	height: auto;
+	width: auto;
+	padding : 0px;
+	cursor: pointer;
+}
+#change_pic, #education_details{
+	cursor : pointer;
+}
+
+http://stackoverflow.com/questions/13870009/how-do-i-change-the-color-or-text-in-an-anchor-tag-by-targeting-the-class-within
+
+
+
+
+
+
+
+
+
+
+

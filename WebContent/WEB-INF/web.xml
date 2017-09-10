@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>FilteredWallll</display-name>
+
+<!-- servlet for registration input index.jsp -->
+  <servlet>
+  	<servlet-name>register</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>register</servlet-name>
+  	<url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for login input index.jsp -->
+  <servlet>
+  	<servlet-name>login</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>login</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for logout input *.jsp -->
+  <servlet>
+  	<servlet-name>logout</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>logout</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for forgot password on home page link on home page -->
+  <servlet>
+  	<servlet-name>forgot</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.ForgotServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>forgot</servlet-name>
+  	<url-pattern>/forgot</url-pattern>
+  </servlet-mapping>
+  
+  <!--  servlet for searching for forgot password -->
+  <servlet>
+  	<servlet-name>forgot1</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.SearchAccountForPasswordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>forgot1</servlet-name>
+  	<url-pattern>/forgot1</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for add_post for on home -->
+  <servlet>
+  	<servlet-name>status</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.StatusUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>status</servlet-name>
+  	<url-pattern>/statusupdate</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for home -->
+  <servlet>
+  	<servlet-name>home</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>home</servlet-name>
+  	<url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for settings -->
+  <servlet>
+  	<servlet-name>settings</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.SettingsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>settings</servlet-name>
+  	<url-pattern>/settings</url-pattern>  
+  </servlet-mapping>
+  
+  <!-- servlet for changepwd.jsp -->
+  <servlet>
+  	<servlet-name>changepwd</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.ChangePwd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>changepwd</servlet-name>
+  	<url-pattern>/changepwd</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for changepwd1 -->
+  <servlet>
+  	<servlet-name>changepwd1</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.ChangePwd1Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>changepwd1</servlet-name>
+  	<url-pattern>/changepwd1</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for index.jsp -->
+  <servlet>
+  	<servlet-name>index</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.IndexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>index</servlet-name>
+  	<url-pattern>/index</url-pattern>
+  </servlet-mapping>
+  <!-- servlet for ff -->
+  <servlet>
+  	<servlet-name>ff</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.FFServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ff</servlet-name>
+  	<url-pattern>/friends</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for addf -->
+  <servlet>
+  	<servlet-name>addfriend</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.AddFServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>addfriend</servlet-name>
+  	<url-pattern>/addfriend</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for ViewRecievedRequests -->
+  <servlet>
+  	<servlet-name>viewrecieved</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.ViewRecievedServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>viewrecieved</servlet-name>
+  	<url-pattern>/viewrecieved</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for ViewSentRequests -->
+  <servlet>
+  	<servlet-name>viewsent</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.ViewSentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>viewsent</servlet-name>
+  	<url-pattern>/viewsent</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for confirmfriend request -->
+  <servlet>
+  	<servlet-name>confirmfriend</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.ConfirmFriendServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>confirmfriend</servlet-name>
+  	<url-pattern>/confirmfriend</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for cancelfriend request -->
+  <servlet>
+  	<servlet-name>cancelfriend</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.CancelFriendServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cancelfriend</servlet-name>
+  	<url-pattern>/cancelfriend</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for discardfriend request -->
+  <servlet>
+  	<servlet-name>discardfriend</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.DiscardFriendServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>discardfriend</servlet-name>
+  	<url-pattern>/discardfriend</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for unfriending -->
+  <servlet>
+  	<servlet-name>unfriend</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.UnFriendServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>unfriend</servlet-name>
+  	<url-pattern>/unfriend</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for friend suggestions -->
+  <servlet>
+  	<servlet-name>friendsuggestions</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.FriendSuggestionsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>friendsuggestions</servlet-name>
+  	<url-pattern>/friendsuggessions</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for liking posts -->
+  <servlet>
+  	<servlet-name>like</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.LikeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>like</servlet-name>
+  	<url-pattern>/like</url-pattern>
+  </servlet-mapping>
+  <!-- servlet for unliking posts -->
+  <servlet>
+  	<servlet-name>unlike</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.UnlikeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>unlike</servlet-name>
+  	<url-pattern>/unlike</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for messages -->
+  <servlet>
+  	<servlet-name>messages</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.MessagesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>messages</servlet-name>
+  	<url-pattern>/messages</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for ajax conversation -->
+  <servlet>
+  	<servlet-name>conv</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.AjaxConversationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>conv</servlet-name>
+  	<url-pattern>/conversation</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for addmsg -->
+  <servlet>
+  	<servlet-name>addmsg</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.AddMsgServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>addmsg</servlet-name>
+  	<url-pattern>/addmsg</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for profile_view -->
+  <servlet>
+  	<servlet-name>profile_view</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.ProfileViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>profile_view</servlet-name>
+  	<url-pattern>/profile</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for postonotherwall -->
+  <servlet>
+	  <servlet-name>postonotherswall</servlet-name>
+	  <servlet-class>org.sudeep.fw.servlet.PostOnOthersWallServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>postonotherswall</servlet-name>
+  	<url-pattern>/postonother</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for uname.jsp -->
+  <servlet>
+  	<servlet-name>uname</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.UnameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>uname</servlet-name>
+  	<url-pattern>/uname</url-pattern>
+  </servlet-mapping>
+  
+  <!-- servlet for checkavailability -->
+  <servlet>
+ 	<servlet-name>checkavailability</servlet-name>
+ 	<servlet-class>org.sudeep.fw.servlet.CheckAvailabilityServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>checkavailability</servlet-name>
+  	<url-pattern>/checkavailability</url-pattern>
+  </servlet-mapping>
+  
+   <!-- servlet for saveusername -->
+  <servlet>
+ 	<servlet-name>saveuname</servlet-name>
+ 	<servlet-class>org.sudeep.fw.servlet.SaveUnameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>saveuname</servlet-name>
+  	<url-pattern>/saveuname</url-pattern> 	
+  </servlet-mapping>
+  
+  <!--  servlet for editprofile -->
+  <servlet>
+  	<servlet-name>editprofile</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.EditProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>editprofile</servlet-name>
+  	<url-pattern>/editprofile</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>profilefriends</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.ProfileFriendsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>profilefriends</servlet-name>
+  	<url-pattern>/profile/friends</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ajax_image_upload</servlet-name>
+  	<servlet-class>org.sudeep.fw.servlet.AjaxProfilePicUploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ajax_image_upload</servlet-name>
+  	<url-pattern>/ajax_profilepic_upload</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  	<param-name>profilepic</param-name>
+  	<param-value>/home/sudeep/dp/</param-value>
+  	<!-- description>Location to store uplaoded profile images</description>-->
+  </context-param>
+  
+  <welcome-file-list>
+      <welcome-file>jsp/index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <session-config>
+  	<session-timeout>60</session-timeout>
+  </session-config>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
